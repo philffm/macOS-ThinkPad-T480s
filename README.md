@@ -32,7 +32,7 @@ This repository contains a sample configuration to run macOS (Currently Mojave `
   - Fingerprint scanner
   - Thunderbolt 3 (USB type-c works)
 - Firmware Revisions
-  - BIOS version `1.25`
+  - BIOS version `1.26`
 
 ## Preparation
 
