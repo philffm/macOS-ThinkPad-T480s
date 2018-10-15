@@ -9,7 +9,7 @@ This repository contains a sample configuration to run macOS (Currently Mojave `
   - 8GB RAM onboard + Crucial DDR4 2400-SODIMM
   - Samsung 970 evo NVMe SSD
   - Dell DW1560 Wireless (original Intel AC8265 not working)
-    - Wi-Fi device ID [`14e4:43b1`], shows as Apple Airport Extreme due to `FakePCIID_Broadcom_WiFi.kext`
+    - Wi-Fi device ID [`14e4:43b1`], shows as Apple Airport Extreme due to `AirportBrcmFixup.kext`
     - Bluetooth device ID [`0a5c:216f`], chipset `20702A3` with firmware `v14 c5882` using `BrcmPatchRAM2.kext`
   - Realtek ALC257 by `AppleALC.kext` with `layout-id` 11 (requies a [patch][alc], already patched in this repo)
   - Intel UHD Graphics 620 (Nvidia MX150 disabled, Optimus not supported by macOS)
