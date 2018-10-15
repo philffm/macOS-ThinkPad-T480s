@@ -11,7 +11,7 @@ This repository contains a sample configuration to run macOS (Currently Mojave `
   - Dell DW1560 Wireless (original Intel AC8265 not working)
     - Wi-Fi device ID [`14e4:43b1`], shows as Apple Airport Extreme due to `FakePCIID_Broadcom_WiFi.kext`
     - Bluetooth device ID [`0a5c:216f`], chipset `20702A3` with firmware `v14 c5882` using `BrcmPatchRAM2.kext`
-  - Realtek ALC257 using `VoodooHDA.kext` temporarily, `AppleALC.kext` [not working][t480] (though [layout 11 codec][layout11] is correct)
+  - Realtek ALC257 by `AppleALC.kext` with `layout-id` 11 (requies a [patch][alc], already patched in this repo)
   - Intel UHD Graphics 620 (Nvidia MX150 disabled, Optimus not supported by macOS)
   - Power management and battery status by ACPI hotpatching
   - Integrated camera (works out of the box)
@@ -50,7 +50,6 @@ This repository contains a sample configuration to run macOS (Currently Mojave `
 - [Dell XPS 13 9360 Guide](https://github.com/the-darkvoid/XPS9360-macOS)
 - [ThinkPad X1 Carbon Gen 6 Guide](https://github.com/tylernguyen/x1c6-hackintosh)
 
-[t480]: https://www.hackintosh-forum.de/index.php/Thread/37614-Lenovo-T480/?postID=434080#post434080
-[layout11]: https://github.com/acidanthera/AppleALC/tree/master/Resources/ALC257
+[alc]: https://github.com/acidanthera/AppleALC/pull/324
 [clover]: https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
 [uuid]: https://www.uuidgenerator.net/
