@@ -870,7 +870,7 @@
 					<key>ClickpadVirtualButtons</key>
 					<false/>
 					<key>ClickpadVirtualButtonsArea</key>
-					<integer>20</integer>
+					<integer>0</integer>
 					<key>DisablePhysicalClicks</key>
 					<false/>
 					<key>EnablePointingOnVirtualButtonArea</key>
@@ -1394,7 +1394,7 @@
 					<key>MulFingTapTimeOut</key>
 					<integer>200</integer>
 					<key>TapMaxDelta</key>
-					<integer>100</integer>
+					<integer>200</integer>
 					<key>TrackpadTappingCorners</key>
 					<false/>
 				</dict>
