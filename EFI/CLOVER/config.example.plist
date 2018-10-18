@@ -314,7 +314,7 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>
-				AAAeWQ==
+				AAAWWQ==
 				</data>
 				<key>device-id</key>
 				<data>
@@ -322,16 +322,6 @@
 				</data>
 				<key>enable-hdmi20</key>
 				<integer>1</integer>
-				<key>framebuffer-con2-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-con2-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
-				<key>framebuffer-con2-type</key>
-				<data>
-				AAgAAA==
-				</data>
 				<key>framebuffer-fbmem</key>
 				<data>
 				AACQAA==
