@@ -1306,13 +1306,13 @@
 					<key>3FingerSwipes</key>
 					<true/>
 					<key>4FingerSwipeDownAction</key>
-					<integer>0</integer>
+					<integer>4</integer>
 					<key>4FingerSwipeLeftAction</key>
 					<integer>6</integer>
 					<key>4FingerSwipeRightAction</key>
 					<integer>7</integer>
 					<key>4FingerSwipeUpAction</key>
-					<integer>0</integer>
+					<integer>4</integer>
 					<key>4FingerSwipes</key>
 					<true/>
 					<key>EdgeSwipeBottom</key>
