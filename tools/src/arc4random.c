@@ -57,7 +57,6 @@
 #include <windows.h>
 #include <wincrypt.h>
 #include <process.h>
-#include <stdint.h>
 #else
 #include <fcntl.h>
 #include <unistd.h>
@@ -66,6 +65,7 @@
 #include <errno.h>
 #endif
 #endif
+#include <stdint.h>
 #include <limits.h>
 #include <stdlib.h>
 #include <string.h>
