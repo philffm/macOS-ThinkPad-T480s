@@ -36,11 +36,9 @@ This repository contains a sample configuration to run macOS (Currently Mojave `
 
 ## Preparation
 
-* (**Important**) Copy `EFI/CLOVER/config.example.plist` to `config.plist`. Edit SMBIOS entry in `config.plist` to work properly:
-  - `BoardSerialNumber`: Change any `Z` to random letters or numbers, or simply use [macserial][macserial]
-  - `Memory -> Modules`: Fill in the correct size for your RAM in `Size`, e.g. `4096` for 4GB, `8192` for 8GB
-  - `SerialNumber`: Change any `Z` to random letters or numbers, or simply use [macserial][macserial]
-  - `SmUUID`: Generate a unique UUID by `uuidgen` or simply using an [online service][uuid]
+* (**Important**) You need to generate a proper `config.plist` with unique serial numbers:
+  - Run `./tools/gen.sh` (macOS) or "tools\gen.bat" (Windows) to generate `config.plist`.
+  - Add `-f` or `--force` flag to forcibly regenerating `config.plist` with new serial numbers.
 * All SSDT hotpatches are located at `EFI/CLOVER/ACPI/dsl`. You can update the compiled `.aml` binaries by running `update.sh` (macOS) or `update.bat` (Windows).
 * The `SSDT-KBD.aml` is tuned for `ApplePS2SmartTouchPad.kext`. If you want to switch to `VoodooPS2Controller.kext`, use `SSDT-KBD.aml` in `backup` folder instead.
 
