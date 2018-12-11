@@ -37,8 +37,8 @@ This repository contains a sample configuration to run macOS (Currently Mojave `
 ## Preparation
 
 * (**Important**) You need to generate a proper `config.plist` with unique serial numbers:
-  - Run `./tools/gen.sh` (macOS) or "tools\gen.bat" (Windows) to generate `config.plist`.
-  - Add `-f` or `--force` flag to forcibly regenerating `config.plist` with new serial numbers.
+  - Run `./tools/gen.sh` (macOS) or `tools\gen.bat` (Windows) to generate `config.plist`.
+  - Add `-f` or `--force` flag to forcibly regenerate `config.plist` with new serial numbers.
 * All SSDT hotpatches are located at `EFI/CLOVER/ACPI/dsl`. You can update the compiled `.aml` binaries by running `update.sh` (macOS) or `update.bat` (Windows).
 * The `SSDT-KBD.aml` is tuned for `ApplePS2SmartTouchPad.kext`. If you want to switch to `VoodooPS2Controller.kext`, use `SSDT-KBD.aml` in `backup` folder instead.
 
