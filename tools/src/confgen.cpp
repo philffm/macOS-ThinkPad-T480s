@@ -160,6 +160,9 @@ void uuid_gen_random(char *uuid) {
 }
 
 void uuid_gen(char *uuid) {
+    if (uuid == NULL) {
+        return;
+    }
 #if defined(__APPLE__) || defined(_WIN32)
 #ifdef _WIN32
     GUID newId;
@@ -253,7 +256,7 @@ int main(int argc, char *argv[]) {
         }
     }
     if (template_path == NULL) {
-        fprintf(stderr, "Error: no template config.plist speicifed.\n");
+        fprintf(stderr, "Error: no template config.plist specified.\n");
         usage(argv[0]);
         goto end;
     }
