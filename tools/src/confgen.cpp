@@ -320,8 +320,11 @@ int main(int argc, char *argv[]) {
     if (output_file == NULL) {
         fprintf(stderr, "Error: cannot write to output: %s\n", output_path);
     } else {
-        write_nodes(template_path, output_file, &info);
-        fprintf(stdout, "Generated: %s\n", output_path);
+        if (write_nodes(template_path, output_file, &info) == 0) {
+            fprintf(stdout, "Generated: %s\n", output_path);
+        } else {
+            fprintf(stderr, "Error: template file is invalid.");
+        }
     }
 end:
     SAFE_FREE(source_path);
