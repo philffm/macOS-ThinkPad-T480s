@@ -33,7 +33,11 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_THBT", 0x00000000)
                 })
             }
 
-            Name (_RMV, One)  // _RMV: Removal Status
+            Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
+            {
+                Return (Zero)
+            }
+
             Device (DSB0)
             {
                 Name (_ADR, Zero)  // _ADR: Address
@@ -57,6 +61,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_THBT", 0x00000000)
                 Device (NHI0)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
+                    Name (_STR, Unicode ("Thunderbolt"))  // _STR: Description String
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If (LNot (Arg2))
@@ -67,10 +72,32 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_THBT", 0x00000000)
                             })
                         }
 
-                        Return (Package (0x02)
+                        Return (Package (0x09)
                         {
-                            "power-save", 
-                            Zero
+                            "built-in",
+                            Buffer (One)
+                            {
+                                 0x00
+                            },
+
+                            "device_type",
+                            Buffer (0x19)
+                            {
+                                "Thunderbolt 3 Controller"
+                            },
+
+                            "AAPL,slot-name",
+                            Buffer (0x09)
+                            {
+                                "Built-In"
+                            },
+
+                            "power-save",
+                            One,
+                            Buffer (One)
+                            {
+                                 0x00
+                            }
                         })
                     }
                 }
